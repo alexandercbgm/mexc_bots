@@ -1,0 +1,65 @@
+# --- 1. ОБЩИЕ НАСТРОЙКИ ЦИКЛА И ДАННЫХ ---
+SETTINGS:
+  NUM_CANDLES_TO_FETCH: 121
+  # CANDLE_TIMEFRAME_MINUTES: 1
+  CANDLE_TIMEFRAME_MINUTES: 5
+
+# --- 1.1. ПАРАМЕТРЫ API ---
+API:
+  API_SYMBOL: "ADA_USDT"
+  # API_INTERVAL: "Min1"
+  API_INTERVAL: "Min5"
+  REFRESH_INTERVALS_SECONDS: [10, 30, 50] # Секунды в которые будем обновлять данные
+
+# --- 2. OCR И НАСТРОЙКИ ИЗОБРАЖЕНИЙ (ТОЛЬКО ДЛЯ ПОЗИЦИЙ И КНОПОК) ---
+OCR:
+  TESSERACT_PATH: "C:\\Program Files\\Tesseract-OCR\\tesseract.exe"
+  POSITIONS_HEADER_REGION: [10, 580, 62, 20]
+  POSITIONS_OCR_CONFIG: "--psm 6 -c tessedit_char_whitelist=()0123456789Pposiitns"
+
+IMAGE_PROCESSING:
+  SCALE_FACTOR: 2.0
+  BLUR_KERNEL_SIZE: [5, 5]
+
+# --- 3. КООРДИНАТЫ ПАНЕЛИ ТОРГОВЛИ ---
+TRADE_PANEL:
+  LOT_INPUT_USD:
+    coords: [1166, 383]
+    description: "Размер лота в USD"
+  STOP_INPUT:
+    coords: [1172, 639]
+    description: "Поле ввода Стопа"
+  BUTTON_BUY_LONG:
+    coords: [1182, 674]
+    description: "Кнопка Open Long"
+  BUTTON_SELL_SHORT:
+    coords: [1283, 677]
+    description: "Кнопка Open Short"
+
+# --- 4. КООРДИНАТЫ УПРАВЛЕНИЯ СТОПАМИ (Форма 1: Список стопов) ---
+TP_SL_ADD_FORM_1:
+  ICON_ADD_STOP:
+    coords: [698, 659]
+    description: "Значок открыть форму редактирования стопов"
+  ICON_EDIT_FIRST_STOP:
+    coords: [860, 451]
+    description: "Иконка редактирования первого стопа в списке"
+  BUTTON_CLOSE:
+    coords: [821, 197] # Нажимаем на пустую область вне формы для ее закрытия
+    description: "Крестик закрытия формы редактирования стопов"
+
+# --- 5. КООРДИНАТЫ УПРАВЛЕНИЯ СТОПАМИ (Форма 2: Редактирование) ---
+TP_SL_ADD_FORM_2:
+  STOP_PRICE_INPUT:
+    coords: [503, 508]
+    description: "Поле ввода Стопа на форме редактирования"
+  BUTTON_CONFIRM:
+    coords: [788, 655]
+    description: "Кнопка Confirm на форме редактирования"
+  BUTTON_CANCEL:
+    coords: [576, 658]
+    description: "Кнопка Cancel на форме редактирования"
+
+# --- 6. КООРДИНАТЫ POP-UP ПРЕДУПРЕЖДЕНИЯ (Confirm) ---
+POPUP_CONFIRMATION:
+  BUTTON_CONFIRM_COORDS: [741, 498]
